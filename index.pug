@@ -7,6 +7,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
         title Chat
     body 
         main 
@@ -34,4 +35,15 @@ html(lang="en")
                             .content_chat_my_profile_dot 
                                 .content_chat_my_profile_dot_child 
                     .content_call 
-                        h1 Call
+                        .content_call_title_and_active 
+                            h1.content_call_title Michael Wong
+                            .content_call_active
+                                .content_call_active_child
+                        
+                        .content_call_profile
+                            .content_call_profile_cloak 
+                                .content_call_profile_cloak2 
+                                    img(src="/img/perfil.png", class="content_call_profile_image" alt="Profile")
+                        
+                        .content_call_icons 
+                            img(src="img/lastImage.png", alt="Last Image")
