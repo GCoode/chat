@@ -19,26 +19,91 @@ main {
   display: grid;
   -ms-grid-columns: 1fr 3fr;
   grid-template-columns: 1fr 3fr;
+  border-radius: 13px;
 }
 .content .content_chat {
   background-color: #f6f6fd;
+  padding: 19px 14px;
+}
+.content .content_chat .content_chat_find_conversations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 19px;
 }
 .content .content_chat .content_chat_find_conversations .content_chat_find_conversations_input_content {
   background-color: #F0F0FB;
   padding: 15px 14px;
   border-radius: 7px;
-  margin-bottom: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+.content .content_chat .content_chat_find_conversations .content_chat_find_conversations_input_content img {
+  margin-right: 14px;
 }
 .content .content_chat .content_chat_find_conversations .content_chat_find_conversations_input_content input {
   border: none;
   background-color: inherit;
   font-family: Gotham;
+  font-weight: 400;
   font-size: 12.5px;
 }
 .content .content_chat .content_chat_find_conversations .content_chat_find_conversations_input_content input:focus {
   outline: none;
 }
-.content .content_chat .content_chat_find_conversations .content_chat_find_conversations_input_content .conetent_chat_find_conversations_add_people img {
-  padding: 34px 34px;
+.content .content_chat .content_chat_find_conversations .conetent_chat_find_conversations_add_people {
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
+  background-color: #8472FC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 25px;
+  bottom: -15px;
+  cursor: pointer;
+}
+.content .content_chat .content_chat_find_conversations .conetent_chat_find_conversations_add_people img {
+  width: 11px;
+  height: 11px;
+}
+.content .content_chat .content_chat_RUG {
+  padding-left: 14px;
+}
+.content .content_chat .content_chat_RUG .content_chat_RUG_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content .content_chat .content_chat_RUG .content_chat_RUG_ul .content_chat_RUG_ul_li {
+  list-style: none;
+  margin-right: 32px;
+}
+.content .content_chat .content_chat_RUG .content_chat_RUG_ul .content_chat_RUG_ul_li .content_chat_RUG_ul_li_a {
+  text-decoration: none;
+  font-family: Gotham;
+  font-size: 11px;
+  color: #9095A4;
+}
+.content .content_chat .content_chat_RUG .content_chat_RUG_ul .content_chat_RUG_ul_li_active {
+  color: #8472FC;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+.content .content_chat .content_chat_RUG .content_chat_RUG_ul .content_chat_RUG_ul_li_active .content_chat_RUG_ul_li_a_active {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #8472FC;
 }

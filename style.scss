@@ -1,3 +1,8 @@
+@mixin same($pixel){
+    width: $pixel;
+    height: $pixel;
+}
+
 *, *::after, *::before{
     box-sizing: border-box;
     padding: 0;
@@ -13,27 +18,73 @@ main{
 .content{
     display: grid;
     grid-template-columns: 1fr 3fr;
+    border-radius: 13px;
     .content_chat{
         background-color: #f6f6fd;
+        padding: 19px 14px;
         .content_chat_find_conversations{
+            display: flex;
+            position: relative;
+            margin-bottom: 19px;
             .content_chat_find_conversations_input_content{
                 background-color: #F0F0FB;
                 padding: 15px 14px;
                 border-radius: 7px;
-                margin-bottom: 19px;
+                display: flex;
+                align-items: center;
+                width: 100%;         
+                img{
+                    margin-right: 14px;
+                }
                 input{
                     border: none;    
                     background-color: inherit;   
-                    font-family: Gotham;  
-                    font-size: 12.5px;         
+                    font-family: Gotham; 
+                    font-weight: 400; 
+                    font-size: 12.5px;
                     &:focus{
                         outline: none;                  
                     }
                 }
-            .conetent_chat_find_conversations_add_people
-                padding: 34px 34px;
+            }
+            .conetent_chat_find_conversations_add_people{
+                @include same(34px);
                 border-radius: 50%;
+                background-color: #8472FC;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 25px;
+                bottom: -15px;
+                cursor: pointer;
                 img{
+                    @include same(11px);
+                }
+            }
+        }
+        .content_chat_RUG{
+            padding-left: 14px;
+            .content_chat_RUG_ul{
+                display: flex;
+                .content_chat_RUG_ul_li{
+                    list-style: none;
+                    margin-right: 32px;
+                    .content_chat_RUG_ul_li_a{
+                        text-decoration: none;
+                        font-family: Gotham;
+                        font-size: 11px;
+                        color: #9095A4;
+                    }
+                }
+                .content_chat_RUG_ul_li_active{
+                    color: #8472FC;
+                    border-radius: 50%;
+                    margin-bottom: 24px;
+                    .content_chat_RUG_ul_li_a_active{
+                        padding-bottom: 10px;
+                        border-bottom: 3px solid #8472FC;
+                }
                 }
             }
         }
