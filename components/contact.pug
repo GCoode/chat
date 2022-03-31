@@ -1,0 +1,12 @@
+mixin chat(image, name, message, date)
+    .content_chat_module_image_profile_and_dot
+        img(src=image, class="content_chat_module_image_profile" alt="Profile Image")
+        .content_chat_module_image_dot
+            .content_chat_module_image_dot_child
+    .content_chat_module_message_and_name 
+        p.content_chat_module_name= name 
+        p.content_chat_module_message= message
+    .content_chat_module_date_and_option 
+        for i in [1, 2, 3]
+            img(src="img/icons/dotIcons.png", class="content_chat_module_option" alt="Dots Icons")
+        p.content_chat_module_date= date

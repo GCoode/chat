@@ -1,0 +1,37 @@
+include components/vars
+include components/contact
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Chat
+    body 
+        main 
+            .container 
+                .content 
+                    .content_chat   
+                        .content_chat_find_conversations
+                            .content_chat_find_conversations_input_content
+                                img(src="img/icons/searchInput.png", alt="Search Icon")
+                                input(type="text" placeholder="Find people and conversations")
+                            .conetent_chat_find_conversations_add_people: img(src="img/icons/addButton.png" alt="Add people")
+                        
+                        .content_chat_RUG: ul.content_chat_RUG_ul
+                            li.content_chat_RUG_ul_li.content_chat_RUG_ul_li_active
+                                a(href="#" class="content_chat_RUG_ul_li_a content_chat_RUG_ul_li_a_active") Recent
+                            li.content_chat_RUG_ul_li: a(href="#" class="content_chat_RUG_ul_li_a") Unread
+                            li.content_chat_RUG_ul_li: a(href="#" class="content_chat_RUG_ul_li_a") Groups
+                        
+                        .content_chat_module
+                            for value, index in images 
+                                +chat(value, name[index], message[index], date[index])
+                        
+                        .content_chat_my_profile 
+                            img(src="img/perfil/myProfile.png", class="content_chat_my_profile_image" alt="myProfile")
+                            .content_chat_my_profile_dot 
+                                .content_chat_my_profile_dot_child 
+                    .content_call 
+                        h1 Call
